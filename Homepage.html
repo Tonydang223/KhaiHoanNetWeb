@@ -4,16 +4,372 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Khai Hoan Net</title>
-    <link rel="stylesheet" type="text/css" href="./css/bootstrap.min.css">
-    <link rel="stylesheet" type="text/css" href="./css/HomePage.css">
+    <link rel="stylesheet" type="text/css" href="./css/bootstrap.min.css" />
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/fontawesome.min.css"
+    />
+    <link href="css/animated-border.css" rel="stylesheet">
+
+    <link rel="stylesheet" type="text/css" href="./css/HomePage.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.css"
+    />
+    <link href="https://vjs.zencdn.net/8.3.0/video-js.css" rel="stylesheet" />
   </head>
   <body>
-    <header></header>
-    <main></main>
-    <footer></footer>
+    <header>
+      <nav class="navbar navbar-expand-lg">
+        <div class="container wrHeader">
+          <a class="navbar-brand" href="#">
+            <img
+              src="./imgs/logokh.png"
+              alt=""
+              width="80"
+              height="70"
+              class="d-inline-block align-text-top"
+            />
+            <span class="txt"> Khai Hoan Net </span>
+          </a>
+          <button
+            class="navbar-toggler"
+            type="button"
+            data-bs-toggle="collapse"
+            data-bs-target="#navbarSupportedContent"
+            aria-controls="navbarSupportedContent"
+            aria-expanded="false"
+            aria-label="Toggle navigation"
+          >
+            <span class="navbar-toggler-icon">
+              <i class="fa-solid fa-bars"></i>
+            </span>
+          </button>
+          <div
+            class="collapse navbar-collapse flex-grow-0"
+            id="navbarSupportedContent"
+          >
+            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+              <li class="nav-item">
+                <a class="nav-link active" aria-current="page" href="#"
+                  >Trang chủ</a
+                >
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#">Giới thiệu</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#">Lĩnh Vực</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#">Dự án</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#">Tuyển dụng</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#">Liên Hệ</a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </nav>
+    </header>
+    <main>
+      <section class="pdw" id="home">
+        <div class="swiper">
+          <div class="swiper-wrapper">
+            <div class="swiper-slide">
+              <div>
+                <img src="./imgs/Toàn Cảnh.jpg" alt="Slide 1" />
+              </div>
+              <div class="overlay"></div>
+            </div>
+            <div class="swiper-slide">
+              <div>
+                <img src="./imgs/Toàn cảnh.jpg" alt="Slide 2" />
+              </div>
+              <div class="overlay"></div>
+            </div>
+            <div class="swiper-slide">
+              <div>
+                <img src="./imgs/Toàn cảnh.jpg" alt="Slide 3" />
+              </div>
+              <div class="overlay"></div>
+            </div>
+          </div>
+          <div class="swiper-pagination"></div>
+        </div>
+        <div class="content">
+          <h2>Welcome to us</h2>
+          <p style="color: #fff">A interesting place to enjoy</p>
+        </div>
+        <ul class="info-socialMedia">
+          <li class="infoSM-item">
+            <a class="infoSM-link">
+              <i class="fab fa-facebook-f"></i>
+              &nbsp;facebook.com/KhaiHoanNet.Tuyen.Dung
+            </a>
+          </li>
+          <li class="infoSM-item">
+            <a class="infoSM-link">
+              <i class="fab fa-linkedin-in"></i>
+              &nbsp;linkedin.com/company/khaihoannet-careers/
+            </a>
+          </li>
+          <li class="infoSM-item">
+            <a class="infoSM-link">
+              <i class="fab fa-tiktok"></i>
+              &nbsp;tiktok.com/@wassupbaser
+            </a>
+          </li>
+        </ul>
+      </section>
+      <section class="about" id="about">
+        <div class="container">
+          <div class="contentAb row">
+            <div class="col-6">
+              <h2 class="title-part">Giới thiệu chung</h2>
+              <div class="bordersh"></div>
+              <p>
+                Công ty Cổ phần Khải Hoàn Net là đơn vị chuyên cung cấp sản phẩm
+                mỹ phẩm, thiết bị gia dụng trên các nền tảng thương mại điện tử
+                và đào tạo Digital Marketing chuyên nghiệp tại thị trường trong
+                nước và khu vực Đông Nam Á.
+              </p>
+            </div>
+            <div class="col-6">
+              <video
+                id="my-video"
+                class="video-js"
+                controls
+                preload="auto"
+                data-setup="{}"
+              >
+                <source
+                  src="imgs/istockphoto-1432475877-640_adpp_is.mp4"
+                  type="video/mp4"
+                />
+              </video>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section class="major" id="major">
+        <div class="container-fluid">
+          <div class="row">
+            <div class="col-4">
+                <video
+                id="my-video"
+                class="video-js"
+                autoplay 
+                muted
+                loop
+                playsinline
+                preload="auto"
+                data-setup="{}"           
+              >
+                <source
+                  src="imgs/istockphoto-1199676105-640_adpp_is.mp4"
+                  type="video/mp4"
+                />
+              </video>
+              <h2 class="title-part">Lĩnh Vực</h2>
+              <div class="bordersh"></div>
+              <p>
+                Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s
+               </p>
+            </div>
+            <div class="col-8">
+              <ul class="major-list row">
+                <li class="major-list-item col-6">
+                   <div class="bg-ig">
+                     <img src="imgs/icons8-ecommerce-64.png" alt="iconDMarketing"/>
+                   </div>
+                   <h3>Đào tạo Digital Marketing</h3>
+                   <p>
+                    Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s
+                   </p>
+                   <p><a>Tìm hiểu thêm >></a></p>
+                </li>
+                <li class="major-list-item col-6">
+                   <div class="bg-ig">
+                     <img src="imgs/icons8-makeup-64.png" alt="iconMakeup"/>
+                   </div>
+                   <h3>Mỹ Phẩm Make Up</h3>
+                   <p>
+                    Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s
+                   </p>
+                   <p><a>Tìm hiểu thêm >></a></p>
+                </li>
+                <li class="w-100 d-none d-md-block"></li>
+                <li class="major-list-item col-6">
+                   <div class="bg-ig">
+                     <img src="imgs/icons8-rice-cooker-64 (1).png" alt="iconRiceCooker"/>
+                   </div>
+                   <h3>Đồ Gia Dụng</h3>
+                   <p>
+                    Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s
+                   </p>
+                   <p><a>Tìm hiểu thêm >></a></p>
+                </li>
+                <li class="major-list-item col-6">
+                   <div class="bg-ig">
+                     <img src="imgs/icons8-laptop-64.png" alt="iconLaptop"/>
+                   </div>
+                   <h3>Đồ Dùng Tiện Ích</h3>
+                   <p>
+                    Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s
+                   </p>
+                   <p><a>Tìm hiểu thêm >></a></p>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+    <footer>
+      <div class="container">
+        <div class="row justify-content-between f1">
+          <div class="col-4">
+            <h2>
+              <a href="#">
+                KhaiHoanNet
+                <span>Nơi Khơi Dậy Giấc Mơ</span>
+              </a>
+            </h2>
+          </div>
+          <div class="col-4">
+            <ul class="fsm-ic">
+              <li class="fsm-ic item">
+                <a
+                  class="fsm-ic link"
+                  data-toggle="tooltip"
+                  data-placement="top"
+                  title=""
+                  data-original-title="Tiktok"
+                >
+                  <i class="fab fa-tiktok"></i>
+                </a>
+              </li>
+              <li class="fsm-ic item">
+                <a
+                  class="fsm-ic link"
+                  data-toggle="tooltip"
+                  data-placement="top"
+                  title=""
+                  data-original-title="Facebook"
+                >
+                  <i class="fab fa-facebook-square"></i>
+                </a>
+              </li>
+              <li class="fsm-ic item">
+                <a
+                  class="fsm-ic link"
+                  data-toggle="tooltip"
+                  data-placement="top"
+                  title=""
+                  data-original-title="Linkedin"
+                >
+                  <i class="fab fa-linkedin"></i>
+                </a>
+              </li>
+            </ul>
+          </div>
+        </div>
+        <div class="row f2">
+          <div class="col">
+            <h2>Khai Hoan Net</h2>
+            <ul class="f2-infoL">
+              <li class="f2-infoL-item">
+                <a class="f2-infoL-link">
+                  <i class="fas fa-clock"></i>
+                  <span class="info-under">
+                    Thứ 2 - Thứ 7 | 08:00 - 17:00
+                  </span>
+                </a>
+              </li>
+              <li class="f2-infoL-item">
+                <a class="f2-infoL-link">
+                  <i class="fas fa-phone-alt"></i>
+                  <span class="info-under"> 0967 948 039 </span>
+                </a>
+              </li>
+              <li class="f2-infoL-item">
+                <a class="f2-infoL-link">
+                  <i class="fas fa-envelope"></i>
+                  <span class="info-under">info@khnet.vn</span>
+                  <span>congtykhaihoannet@gmail.com</span>
+                  <span>info@khnet.vn@gmail.com</span>
+                </a>
+              </li>
+            </ul>
+          </div>
+          <div class="col">
+            <h2>Văn Phòng</h2>
+            <ul class="offi-list">
+              <li class="offi-list-item">
+                <h2>Trụ sở chính</h2>
+                <a class="offi-list-link" href="#"
+                  ><i class="fas fa-map-marker-alt"></i>
+                  <span
+                    >31 Lê Hy Cát, phường Khuê Mỹ, quận Ngũ Hành Sơn, Tp. Đà
+                    Nẵng</span
+                  >
+                </a>
+              </li>
+              <li class="offi-list-item">
+                <h2>Văn phòng đại diện</h2>
+                <a class="offi-list-link" href="#"
+                  ><i class="fas fa-map-marker-alt"></i>
+                  <span>
+                    51 Bùi Tá Hán, phường Khuê Mỹ, quận Ngũ Hành Sơn, Tp. Đà
+                    Nẵng
+                  </span>
+                </a>
+              </li>
+            </ul>
+          </div>
+          <div class="col">
+            <h2>Bản Đồ</h2>
+            <iframe
+              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3834.6628708735734!2d108.24260267505252!3d16.031055884642935!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3142175bca7fe7ed%3A0xd80435a0e440bb0f!2zMzEgQnXMgGkgVGHMgSBIYcyBbiwgS2h1w6ogTeG7uSwgTmfFqSBIw6BuaCBTxqFuLCDEkMOgIE7hurVuZywgVmnhu4d0IE5hbQ!5e0!3m2!1svi!2s!4v1688386363461!5m2!1svi!2s"
+              style="border: 0"
+              allowfullscreen=""
+              loading="lazy"
+              class="map"
+              referrerpolicy="no-referrer-when-downgrade"
+            ></iframe>
+          </div>
+          <div class="col">
+            <h2>Facebook</h2>
+            <img src="./imgs/shg1.jpeg">
+          </div>
+        </div>
+        <div class="row justify-content-between f3">
+          <div class="col-4">
+            <p>Copyright ©2023 All rights reserved.</p>
+          </div>
+          <div class="col-4">
+            <p>
+              This template is made with <i class="fas fa-heart"></i> by
+              <a href="#" class="textIc">KhaiHoanNet.com</a>
+            </p>
+          </div>
+        </div>
+      </div>
+    </footer>
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js"></script>
     <script src="./js/bootstrap.min.js"></script>
     <script src="./js/jquery.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js"></script>
+    <script
+      src="https://kit.fontawesome.com/d44e121fb7.js"
+      crossorigin="anonymous"
+    ></script>
+    <script src="https://vjs.zencdn.net/8.3.0/video.min.js"></script>
     <script src="./js/index.js"></script>
   </body>
 </html>
