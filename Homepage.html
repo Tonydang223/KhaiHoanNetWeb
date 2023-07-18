@@ -10,8 +10,13 @@
       type="text/css"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/fontawesome.min.css"
     />
-    <link href="css/animated-border.css" rel="stylesheet">
-
+    <link href="css/animated-border.css" rel="stylesheet" />
+    <link
+      rel="stylesheet"
+      href="text/css"
+      href="./css/gallery-image-popup.css"
+    />
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
     <link rel="stylesheet" type="text/css" href="./css/HomePage.css" />
     <link
       rel="stylesheet"
@@ -20,13 +25,16 @@
     <link href="https://vjs.zencdn.net/8.3.0/video-js.css" rel="stylesheet" />
   </head>
   <body>
+    <div id="loading-overlay">
+      <div class="loader"></div>
+    </div>
     <header>
       <nav class="navbar navbar-expand-lg">
         <div class="container wrHeader">
           <a class="navbar-brand" href="#">
             <img
               src="./imgs/logokh.png"
-              alt=""
+              alt="picLogo"
               width="80"
               height="70"
               class="d-inline-block align-text-top"
@@ -52,24 +60,21 @@
           >
             <ul class="navbar-nav me-auto mb-2 mb-lg-0">
               <li class="nav-item">
-                <a class="nav-link active" aria-current="page" href="#"
+                <a class="nav-link active" aria-current="page" href="#home"
                   >Trang chủ</a
                 >
               </li>
               <li class="nav-item">
-                <a class="nav-link" href="#">Giới thiệu</a>
+                <a class="nav-link" href="#about">Giới thiệu</a>
               </li>
               <li class="nav-item">
-                <a class="nav-link" href="#">Lĩnh Vực</a>
+                <a class="nav-link" href="#area">Lĩnh Vực</a>
               </li>
               <li class="nav-item">
-                <a class="nav-link" href="#">Dự án</a>
+                <a class="nav-link" href="#project">Dự án</a>
               </li>
               <li class="nav-item">
-                <a class="nav-link" href="#">Tuyển dụng</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" href="#">Liên Hệ</a>
+                <a class="nav-link" href="Employee.html">Tuyển dụng</a>
               </li>
             </ul>
           </div>
@@ -82,55 +87,72 @@
           <div class="swiper-wrapper">
             <div class="swiper-slide">
               <div>
-                <img src="./imgs/Toàn Cảnh.jpg" alt="Slide 1" />
+                <img src="./imgs/activities/DJI_0227.JPG" alt="Slide 1" />
               </div>
               <div class="overlay"></div>
             </div>
             <div class="swiper-slide">
               <div>
-                <img src="./imgs/Toàn cảnh.jpg" alt="Slide 2" />
+                <img src="./imgs/activities/DJI_0227.jpg" alt="Slide 2" />
               </div>
               <div class="overlay"></div>
             </div>
             <div class="swiper-slide">
               <div>
-                <img src="./imgs/Toàn cảnh.jpg" alt="Slide 3" />
+                <img src="./imgs/activities/DJI_0227.JPG" alt="Slide 3" />
               </div>
               <div class="overlay"></div>
             </div>
           </div>
           <div class="swiper-pagination"></div>
         </div>
-        <div class="content">
-          <h2>Welcome to us</h2>
-          <p style="color: #fff">A interesting place to enjoy</p>
+        <div class="container">
+          <div class="content" data-aos="fade-left">
+            <h2>Welcome to us</h2>
+            <p style="color: #fff">A interesting place to enjoy</p>
+          </div>
+          <ul class="info-socialMedia">
+            <li class="infoSM-item">
+              <a class="infoSM-link">
+                <i class="fab fa-facebook-f"></i>
+                &nbsp;facebook.com/KhaiHoanNet.Tuyen.Dung
+              </a>
+            </li>
+            <li class="infoSM-item">
+              <a class="infoSM-link">
+                <i class="fab fa-linkedin-in"></i>
+                &nbsp;linkedin.com/company/khaihoannet-careers/
+              </a>
+            </li>
+            <li class="infoSM-item">
+              <a class="infoSM-link">
+                <i class="fab fa-tiktok"></i>
+                &nbsp;tiktok.com/@wassupbaser
+              </a>
+            </li>
+          </ul>
         </div>
-        <ul class="info-socialMedia">
-          <li class="infoSM-item">
-            <a class="infoSM-link">
-              <i class="fab fa-facebook-f"></i>
-              &nbsp;facebook.com/KhaiHoanNet.Tuyen.Dung
-            </a>
-          </li>
-          <li class="infoSM-item">
-            <a class="infoSM-link">
-              <i class="fab fa-linkedin-in"></i>
-              &nbsp;linkedin.com/company/khaihoannet-careers/
-            </a>
-          </li>
-          <li class="infoSM-item">
-            <a class="infoSM-link">
-              <i class="fab fa-tiktok"></i>
-              &nbsp;tiktok.com/@wassupbaser
-            </a>
-          </li>
-        </ul>
       </section>
       <section class="about" id="about">
         <div class="container">
           <div class="contentAb row">
             <div class="col-6">
-              <h2 class="title-part">Giới thiệu chung</h2>
+              <div class="imgAbout">
+                <img src="./imgs/activities/acti6.jpeg" alt="picAboutus" />
+              </div>
+              <div class="ic-play">
+                <div class="popup-gallery">
+                  <a
+                    href="https://www.youtube.com/watch?v=ONAeIoYpv64&t=16s"
+                    class="popup4 video-icon"
+                  >
+                    <i class="fas fa-play"></i>
+                  </a>
+                </div>
+              </div>
+            </div>
+            <div class="col-6" data-aos="fade-left">
+              <h1>Câu chuyện của Khải Hoàn Net</h1>
               <div class="bordersh"></div>
               <p>
                 Công ty Cổ phần Khải Hoàn Net là đơn vị chuyên cung cấp sản phẩm
@@ -139,92 +161,336 @@
                 nước và khu vực Đông Nam Á.
               </p>
             </div>
-            <div class="col-6">
-              <video
-                id="my-video"
-                class="video-js"
-                controls
-                preload="auto"
-                data-setup="{}"
-              >
-                <source
-                  src="imgs/istockphoto-1432475877-640_adpp_is.mp4"
-                  type="video/mp4"
-                />
-              </video>
+          </div>
+          <div class="contentMiddle row" data-aos-id="super-count">
+            <div class="col">
+              <h2>
+                <span class="numCount" data-val="150">150+</span>
+              </h2>
+              <p>Quy mô nhân sự</p>
+            </div>
+            <div class="col">
+              <h2>
+                <span class="numCount" data-val="200">200+</span>
+              </h2>
+              <p>Sản phẩm khách hàng tin dùng</p>
+            </div>
+            <div class="col">
+              <h2>
+                <span class="numCount" data-val="100">100+</span>
+              </h2>
+              <p>Thị trường hoạt động</p>
+            </div>
+            <div class="col">
+              <h2>
+                <span class="numCount" data-val="98">98%+</span>
+              </h2>
+              <p>Khách hàng hài lòng</p>
+            </div>
+          </div>
+          <div class="contentBt row">
+            <div class="col-6" data-aos="fade-up-right">
+              <div class="paraAb">
+                <h1>Tầm Nhìn</h1>
+                <p>
+                  Trở thành Công ty Thương Mại điện tử hàng đầu Việt Nam và vươn
+                  tầm thế giới
+                </p>
+              </div>
+              <div class="paraBt">
+                <h1>Sứ Mệnh</h1>
+                <p>
+                  Khải Hoàn Net là nơi hội tụ những giấc mơ lớn của những con
+                  người có Tâm - Tín - Tài cùng nhau xây dựng công ty uy tín,
+                  vững mạnh, luôn mang đến những giá trị tốt nhất cho khách hàng
+                  và luôn hướng đến chất lượng sống của đội ngũ nhân viên một
+                  cách tốt nhất.
+                </p>
+              </div>
+            </div>
+            <div class="col-6" data-aos="fade-up-left">
+              <img src="./imgs/activities/acti2.JPG" alt="picAbGoal" />
             </div>
           </div>
         </div>
       </section>
-      <section class="major" id="major">
+      <section class="area" id="area">
+        <div class="container-fluid">
+          <div class="slide" id="slide">
+            <div
+              class="item iArea"
+              style="background-image: url(./imgs/activities/acti2.JPG)"
+            >
+              <div class="content">
+                <div class="name">ĐÀO TẠO DIGITAL MARKETING</div>
+                <div class="des">
+                  Trong thời đại ngành E- commerce đang lên ngôi, Khải Hoàn Net
+                  chính là nơi các bạn trẻ có cơ hội được đào tạo và trải nghiệm
+                  thực tiễn về lĩnh vực Marketing dưới sự dẫn dắt của đội ngũ
+                  chuyên nghiệp và dày dặn kinh nghiệm.
+                </div>
+                =
+              </div>
+            </div>
+            <div
+              class="item iArea"
+              style="background-image: url(./imgs/activities/acti1.JPG)"
+            >
+              <div class="content">
+                <div class="name">KINH DOANH THƯƠNG MẠI</div>
+                <div class="des">
+                  Khải Hoàn Net - nơi tiên phong những khuynh hướng của thế giới
+                  hiện đại, luôn dẫn đầu xu hướng nhằm đáp ứng được nhu cầu của
+                  người tiêu dùng trong ngành Mỹ Phẩm và Đồ Gia Dụng - Tiện ích.
+                  Khải Hoàn Net hoạt động kinh doanh thương mại trên nền tảng
+                  thương mại điện tử với mạng lưới phân phối rộng khắp trên 63
+                  tỉnh thành Việt Nam và các nước trong khu vực Đông Nam Á.
+                </div>
+              </div>
+            </div>
+            <!-- <div
+              class="item iArea"
+              style="background-image: url(./imgs/activities/acti3.JPG)"
+            >
+              <div class="content">
+                <div class="name">LUNDEV</div>
+                <div class="des">
+                  Tinh ru anh di chay pho, chua kip chay pho thi anhchay mat
+                  tieu
+                </div>
+                <button>See more</button>
+              </div>
+            </div>
+            <div
+              class="item iArea"
+              style="background-image: url(./imgs/activities/acti4.JPG)"
+            >
+              <div class="content">
+                <div class="name">LUNDEV</div>
+                <div class="des">
+                  Tinh ru anh di chay pho, chua kip chay pho thi anhchay mat
+                  tieu
+                </div>
+                <button>See more</button>
+              </div>
+            </div>
+            <div
+              class="item iArea"
+              style="background-image: url(./imgs/activities/acti5.JPG)"
+            >
+              <div class="content">
+                <div class="name">LUNDEV</div>
+                <div class="des">
+                  Tinh ru anh di chay pho, chua kip chay pho thi anhchay mat
+                  tieu
+                </div>
+                <button>See more</button>
+              </div>
+            </div>
+            <div
+              class="item iArea"
+              style="background-image: url(./imgs/activities/acti6.jpeg)"
+            >
+              <div class="content">
+                <div class="name">LUNDEV</div>
+                <div class="des">
+                  Tinh ru anh di chay pho, chua kip chay pho thi anhchay mat
+                  tieu
+                </div>
+                <button>See more</button>
+              </div>
+            </div> -->
+          </div>
+          <div class="buttons">
+            <button id="prev"><i class="fa-solid fa-angle-left"></i></button>
+            <button id="next"><i class="fa-solid fa-angle-right"></i></button>
+          </div>
+        </div>
+      </section>
+      <section class="cvalue" id="cvalue">
+        <div class="container" data-aos="zoom-in-up">
+          <h1>Giá Trị Cốt Lỗi - 3T</h1>
+          <div class="wrapBoxValue" id="boxValue">
+            <div class="box-val box1" data-id="box1">
+              <div class="box-title">
+                <h4>TÂM</h4>
+                <p>
+                  Đội ngũ nhân sự của Khải Hoàn Net mang trong mình Tâm huyết
+                  cống hiến thật nhiều giá trị nhằm phụng sự xã hội và nâng tầm
+                  chất lượng cuộc sống cho người Việt Nam.
+                </p>
+              </div>
+            </div>
+            <div class="box-val box2" data-id="box2">
+              <div class="box-title">
+                <h4>TÀI</h4>
+                <p>
+                  Tại Khải Hoàn Net, chúng tôi luôn ý thức đặt chữ “Tín” lên
+                  hàng đầu trong mối quan hệ với đối tác, khách hàng, đồng
+                  nghiệp và gia đình. Từng con người của Khải Hoàn Net đều làm
+                  việc với tinh thần trách nhiệm cao nhất để tạo ra kết quả lớn
+                  nhất.
+                </p>
+              </div>
+            </div>
+            <div class="box-val box3" data-id="box3">
+              <div class="box-title">
+                <h4>TRÍ</h4>
+                <p>
+                  Khải Hoàn Net là nơi hội tụ những con người vừa tài năng vừa
+                  có trách nhiệm cao, nơi mỗi cá nhân có thể phát huy tối đa khả
+                  năng để cùng xây dựng sự nghiệp và chinh phục ước mơ của cuộc
+                  đời mình
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section class="projects" id="project">
         <div class="container-fluid">
           <div class="row">
-            <div class="col-4">
-                <video
-                id="my-video"
-                class="video-js"
-                autoplay 
-                muted
-                loop
-                playsinline
-                preload="auto"
-                data-setup="{}"           
-              >
-                <source
-                  src="imgs/istockphoto-1199676105-640_adpp_is.mp4"
-                  type="video/mp4"
-                />
-              </video>
-              <h2 class="title-part">Lĩnh Vực</h2>
-              <div class="bordersh"></div>
-              <p>
-                Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s
-               </p>
+            <div
+              class="col-6"
+              style="background: url(./imgs/d1.png) no-repeat"
+            ></div>
+            <div class="col-6">
+              <div data-aos="fade-left">
+                <h1>Abera</h1>
+                <p>
+                  Với sứ mệnh “Giúp mọi người chinh phục vẻ đẹp hoàn mỹ”, ABERA
+                  không ngừng đầu tư dây chuyền sản xuất, tập trung nguồn nhân
+                  lực nghiên cứu, nâng cấp chất lượng – dịch vụ để mang đến cho
+                  khách hàng những sản phẩm tốt nhất, an toàn và tin cậy với các
+                  dòng sản phẩm tiêu biểu: Serum Nghệ đỏ Abera, Tinh chất đu đủ
+                  trị mụn cóc Abera, Kem liền sẹo Nghệ đỏ Abera
+                </p>
+              </div>
             </div>
-            <div class="col-8">
-              <ul class="major-list row">
-                <li class="major-list-item col-6">
-                   <div class="bg-ig">
-                     <img src="imgs/icons8-ecommerce-64.png" alt="iconDMarketing"/>
-                   </div>
-                   <h3>Đào tạo Digital Marketing</h3>
-                   <p>
-                    Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s
-                   </p>
-                   <p><a>Tìm hiểu thêm >></a></p>
-                </li>
-                <li class="major-list-item col-6">
-                   <div class="bg-ig">
-                     <img src="imgs/icons8-makeup-64.png" alt="iconMakeup"/>
-                   </div>
-                   <h3>Mỹ Phẩm Make Up</h3>
-                   <p>
-                    Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s
-                   </p>
-                   <p><a>Tìm hiểu thêm >></a></p>
-                </li>
-                <li class="w-100 d-none d-md-block"></li>
-                <li class="major-list-item col-6">
-                   <div class="bg-ig">
-                     <img src="imgs/icons8-rice-cooker-64 (1).png" alt="iconRiceCooker"/>
-                   </div>
-                   <h3>Đồ Gia Dụng</h3>
-                   <p>
-                    Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s
-                   </p>
-                   <p><a>Tìm hiểu thêm >></a></p>
-                </li>
-                <li class="major-list-item col-6">
-                   <div class="bg-ig">
-                     <img src="imgs/icons8-laptop-64.png" alt="iconLaptop"/>
-                   </div>
-                   <h3>Đồ Dùng Tiện Ích</h3>
-                   <p>
-                    Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s
-                   </p>
-                   <p><a>Tìm hiểu thêm >></a></p>
-                </li>
-              </ul>
+          </div>
+          <div class="row">
+            <div class="col-6">
+              <div data-aos="fade-up">
+                <p>
+                  KHOEDEPTAINHA.VN là trang thương mại điện tử về mỹ phẩm ngoại
+                  nhập uy tín, chất lượng hàng đầu Việt Nam, với đa dạng các
+                  dòng sản phẩm làm đẹp được nhập khẩu chính hãng từ các quốc
+                  gia lớn như Mỹ, Hàn Quốc, Nhật, Đài Loan...
+                </p>
+                <h1>Khoẻ Đẹp Tại Nhà</h1>
+              </div>
+            </div>
+            <div
+              class="col-6"
+              style="background: url(./imgs/d2.png) no-repeat"
+            ></div>
+          </div>
+        </div>
+      </section>
+      <section class="activities" id="activities">
+        <h1>Hoạt Động Của Chúng Tôi</h1>
+        <div class="container">
+          <div class="row">
+            <div class="col-4">
+              <div class="imgActi">
+                <img src="./imgs/activities/acti4.jpg" alt="picActi1" />
+              </div>
+              <div class="banText">
+                <h3>Hoạt động Nội Bộ</h3>
+                <p>A interesting place to enjoy</p>
+              </div>
+            </div>
+            <div class="col-4">
+              <div class="imgActi">
+                <img src="./imgs/activities/acti5.jpg" alt="picActi2" />
+              </div>
+              <div class="banText">
+                <h3>Hoạt Động Thiện Nguyện</h3>
+                <p>A interesting place to enjoy</p>
+              </div>
+            </div>
+            <div class="col-4">
+              <div class="imgActi">
+                <img src="./imgs/activities/acti6.jpeg" alt="picActi3" />
+              </div>
+              <div class="banText">
+                <h3>Party</h3>
+                <p>A interesting place to enjoy</p>
+              </div>
+            </div>
+            <div class="col-4">
+              <div class="imgActi">
+                <img src="./imgs/activities/acti2.jpg" alt="picActi4" />
+              </div>
+              <div class="banText">
+                <h3>Camping</h3>
+                <p>A interesting place to enjoy</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section class="cooperators" id="cooperators">
+        <div class="title">
+          <p>Đối tác của <span>Khải Hoàn Net</span></p>
+        </div>
+        <div class="container-fluid">
+          <div class="swiperlogo">
+            <div class="swiper-wrapper">
+              <div class="swiper-slide">
+                <img
+                  src="./imgs/icon5/Google_2015_logo.svg.png"
+                  alt="Slide 1"
+                />
+              </div>
+              <div class="swiper-slide">
+                <img
+                  src="./imgs/icon5/313-3131764_ems-logo-express-mail-hd-png-download-removebg-preview.png"
+                  alt="Slide 2"
+                />
+              </div>
+              <div class="swiper-slide">
+                <img
+                  src="./imgs/icon5/1200px-TikTok_logo.svg.png"
+                  alt="Slide 3"
+                />
+              </div>
+              <div class="swiper-slide">
+                <img src="./imgs/icon5/logoJT.aed0abf4.png" alt="Slide 4" />
+              </div>
+              <div class="swiper-slide">
+                <img
+                  src="./imgs/icon5/png-transparent-youtube-logo-music-video-computer-icons-youtube-logo-text-trademark-logo-removebg-preview.png"
+                  alt="Slide 5"
+                />
+              </div>
+              <div class="swiper-slide">
+                <img src="./imgs/icon5/Shopee.svg.png" alt="Slide 6" />
+              </div>
+              <div class="swiper-slide">
+                <img
+                  src="./imgs/icon5/1200px-TikTok_logo.svg.png"
+                  alt="Slide 7"
+                />
+              </div>
+              <div class="swiper-slide">
+                <img
+                  src="./imgs/icon5/png-transparent-youtube-logo-music-video-computer-icons-youtube-logo-text-trademark-logo-removebg-preview.png"
+                  alt="Slide 8"
+                />
+              </div>
+              <div class="swiper-slide">
+                <img
+                  src="./imgs/icon5/Google_2015_logo.svg.png"
+                  alt="Slide 9"
+                />
+              </div>
+              <div class="swiper-slide">
+                <img
+                  src="./imgs/icon5/313-3131764_ems-logo-express-mail-hd-png-download-removebg-preview.png"
+                  alt="Slide 10"
+                />
+              </div>
             </div>
           </div>
         </div>
@@ -249,31 +515,9 @@
                   data-toggle="tooltip"
                   data-placement="top"
                   title=""
-                  data-original-title="Tiktok"
-                >
-                  <i class="fab fa-tiktok"></i>
-                </a>
-              </li>
-              <li class="fsm-ic item">
-                <a
-                  class="fsm-ic link"
-                  data-toggle="tooltip"
-                  data-placement="top"
-                  title=""
                   data-original-title="Facebook"
                 >
                   <i class="fab fa-facebook-square"></i>
-                </a>
-              </li>
-              <li class="fsm-ic item">
-                <a
-                  class="fsm-ic link"
-                  data-toggle="tooltip"
-                  data-placement="top"
-                  title=""
-                  data-original-title="Linkedin"
-                >
-                  <i class="fab fa-linkedin"></i>
                 </a>
               </li>
             </ul>
@@ -345,7 +589,7 @@
           </div>
           <div class="col">
             <h2>Facebook</h2>
-            <img src="./imgs/shg1.jpeg">
+            <img src="./imgs/shg1.jpeg" />
           </div>
         </div>
         <div class="row justify-content-between f3">
@@ -361,6 +605,9 @@
         </div>
       </div>
     </footer>
+    <a class="ic-scrollTop" id="icScrollTop">
+      <i class="fas fa-chevron-up"></i>
+    </a>
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js"></script>
     <script src="./js/bootstrap.min.js"></script>
     <script src="./js/jquery.min.js"></script>
@@ -370,6 +617,13 @@
       crossorigin="anonymous"
     ></script>
     <script src="https://vjs.zencdn.net/8.3.0/video.min.js"></script>
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/magnific-popup.js/1.1.0/jquery.magnific-popup.min.js"
+      integrity="sha512-IsNh5E3eYy3tr/JiX2Yx4vsCujtkhwl7SLqgnwLNgf04Hrt9BT9SXlLlZlWx+OK4ndzAoALhsMNcCmkggjZB1w=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    ></script>
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
     <script src="./js/index.js"></script>
   </body>
 </html>

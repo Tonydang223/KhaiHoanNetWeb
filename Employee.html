@@ -4,16 +4,675 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Khai Hoan Net</title>
-    <link rel="stylesheet" type="text/css" href="./css/bootstrap.min.css">
-    <link rel="stylesheet" type="text/css" href="./css/HomePage.css">
+    <link rel="stylesheet" type="text/css" href="./css/bootstrap.min.css" />
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/fontawesome.min.css"
+    />
+    <link href="css/animated-border.css" rel="stylesheet" />
+    <link rel="stylesheet" href="text/css" href="./css/gallery-image-popup.css">
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+
+    <link rel="stylesheet" type="text/css" href="./css/HomePage.css" />
+    <link rel="stylesheet" type="text/css" href="./css/Employee.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.css"
+    />
+    <link href="https://vjs.zencdn.net/8.3.0/video-js.css" rel="stylesheet" />
   </head>
   <body>
-    <header></header>
-    <main></main>
-    <footer></footer>
+    <div id="loading-overlay">
+      <div class="loader"></div>
+    </div>
+    <header>
+      <nav class="navbar navbar-expand-lg">
+        <div class="container wrHeader">
+          <a class="navbar-brand" href="Homepage.html">
+            <img
+              src="./imgs/logokh.png"
+              alt="picLogo"
+              width="80"
+              height="70"
+              class="d-inline-block align-text-top"
+            />
+            <span class="txt"> Khai Hoan Net </span>
+          </a>
+          <button
+            class="navbar-toggler"
+            type="button"
+            data-bs-toggle="collapse"
+            data-bs-target="#navbarSupportedContent"
+            aria-controls="navbarSupportedContent"
+            aria-expanded="false"
+            aria-label="Toggle navigation"
+          >
+            <span class="navbar-toggler-icon">
+              <i class="fa-solid fa-bars"></i>
+            </span>
+          </button>
+          <div
+            class="collapse navbar-collapse flex-grow-0"
+            id="navbarSupportedContent"
+          >
+            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+              <li class="nav-item">
+                <a class="nav-link" href="Homepage.html">Trang chủ</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#position">Vị Trí</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#values">Giá Trị</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#people">Con Người</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link active" aria-current="page" href="#employee"
+                  >Tuyển dụng</a
+                >
+              </li>
+            </ul>
+          </div>
+        </div>
+      </nav>
+    </header>
+    <main>
+      <section class="vidIntro" id="employee">
+        <div class="container-fluid p-0">
+          <video
+            id="my-video"
+            class="video-js"
+            autoplay
+            muted
+            loop
+            playsinline
+            preload="auto"
+            data-setup="{}"
+          >
+            <source
+              src="imgs/istockphoto-1199676105-640_adpp_is.mp4"
+              type="video/mp4"
+            />
+          </video>
+        </div>
+      </section>
+      <!-- <section class="why" id="why">
+        <div class="container">
+          <div class="row">
+            <div class="col-6">
+              <div class="title">
+                <h2 class="title-part">Vì sao nên chọn Khải Hoàn Net</h2>
+                <div class="bordersh"></div>
+              </div>
+              <div class="card">
+                <div class="card-header">
+                  <h3>Danh tiếng công ty</h3>
+                  <span><i class="fas fa-chevron-circle-up"></i></span>
+                </div>
+                <div class="card-body active">
+                  <p>
+                    Lorem Ipsum is simply dummy text of the printing and
+                    typesetting industry. Lorem Ipsum has been the industry's
+                    standard dummy text ever since the 1500s, when an unknown
+                    printer took a galley of type and scrambled it to make a
+                    type specimen book. It has survived not only five centuries,
+                    but also the leap into electronic typesetting, remaining
+                    essentially unchanged.
+                  </p>
+                </div>
+              </div>
+              <div class="card">
+                <div class="card-header">
+                  <h3>Giá trị văn hoá</h3>
+                  <span><i class="fas fa-chevron-circle-up"></i></span>
+                </div>
+                <div class="card-body">
+                  <p>
+                    Lorem Ipsum is simply dummy text of the printing and
+                    typesetting industry. Lorem Ipsum has been the industry's
+                    standard dummy text ever since the 1500s, when an unknown
+                    printer took a galley of type and scrambled it to make a
+                    type specimen book. It has survived not only five centuries,
+                    but also the leap into electronic typesetting, remaining
+                    essentially unchanged.
+                  </p>
+                </div>
+              </div>
+              <div class="card">
+                <div class="card-header">
+                  <h3>Lương, thưởng, chế độ phúc lợi</h3>
+                  <span><i class="fas fa-chevron-circle-up"></i></span>
+                </div>
+                <div class="card-body">
+                  <p>
+                    Lorem Ipsum is simply dummy text of the printing and
+                    typesetting industry. Lorem Ipsum has been the industry's
+                    standard dummy text ever since the 1500s, when an unknown
+                    printer took a galley of type and scrambled it to make a
+                    type specimen book. It has survived not only five centuries,
+                    but also the leap into electronic typesetting, remaining
+                    essentially unchanged.
+                  </p>
+                </div>
+              </div>
+              <div class="card">
+                <div class="card-header">
+                  <h3>Cơ hội phát triển</h3>
+                  <span><i class="fas fa-chevron-circle-up"></i></span>
+                </div>
+                <div class="card-body">
+                  <p>
+                    Lorem Ipsum is simply dummy text of the printing and
+                    typesetting industry. Lorem Ipsum has been the industry's
+                    standard dummy text ever since the 1500s, when an unknown
+                    printer took a galley of type and scrambled it to make a
+                    type specimen book. It has survived not only five centuries,
+                    but also the leap into electronic typesetting, remaining
+                    essentially unchanged.
+                  </p>
+                </div>
+              </div>
+              <div class="card">
+                <div class="card-header">
+                  <h3>Chất lượng công việc và cuộc sống</h3>
+                  <span><i class="fas fa-chevron-circle-up"></i></span>
+                </div>
+                <div class="card-body">
+                  <p>
+                    Lorem Ipsum is simply dummy text of the printing and
+                    typesetting industry. Lorem Ipsum has been the industry's
+                    standard dummy text ever since the 1500s, when an unknown
+                    printer took a galley of type and scrambled it to make a
+                    type specimen book. It has survived not only five centuries,
+                    but also the leap into electronic typesetting, remaining
+                    essentially unchanged.
+                  </p>
+                </div>
+              </div>
+              <div class="card">
+                <div class="card-header">
+                  <h3>Đội ngũ lãnh đạo</h3>
+                  <span><i class="fas fa-chevron-circle-up"></i></span>
+                </div>
+                <div class="card-body">
+                  <p>
+                    Lorem Ipsum is simply dummy text of the printing and
+                    typesetting industry. Lorem Ipsum has been the industry's
+                    standard dummy text ever since the 1500s, when an unknown
+                    printer took a galley of type and scrambled it to make a
+                    type specimen book. It has survived not only five centuries,
+                    but also the leap into electronic typesetting, remaining
+                    essentially unchanged.
+                  </p>
+                </div>
+              </div>
+            </div>
+            <div class="col-6">
+              <img src="./imgs/DSC08337.jpg" alt="" />
+            </div>
+          </div>
+        </div>
+      </section> -->
+      <section class="chooseUs" id="chooseUs">
+        <div class="container">
+          <div class="row">
+            <div class="col-6" data-aos="fade-right">
+              <h2>Vì sao chọn Khải Hoàn Net</h2>
+              <div class="imgW">
+                <img src="./imgs/activities/acti6.jpeg" alt="picWhy" />
+              </div>
+            </div>
+            <div class="col-6" data-aos="fade-up">
+              <ul>
+                <li>
+                  <span><i class="fas fa-quote-left"></i></span>
+                  <p>
+                    Khải Hoàn Net là đơn vị có kinh nghiệm và uy tín hàng đầu
+                    trong lĩnh vực Marketing tại Đà Nẵng. Hơn nữa, đội ngũ lãnh
+                    đạo có tầm nhìn, chiến lược rõ ràng, dẫn dắt Công ty đến với
+                    thành công
+                  </p>
+                  <h4>Danh tiếng công ty</h4>
+                </li>
+                <li>
+                  <span><i class="fas fa-quote-left"></i></span>
+                  <p>
+                    Những giá trị văn hóa ở công ty tạo nên một môi trường làm
+                    việc năng động và chuyên nghiệp. Bên cạnh đó, Chính sách
+                    lương, thưởng và phúc lợi rõ ràng và minh bạch luôn tạo động
+                    lực cho nhân viên cống hiến hết mình cho công ty.
+                  </p>
+                  <h4>Giá trị công ty mang lại</h4>
+                </li>
+                <li>
+                  <span><i class="fas fa-quote-left"></i></span>
+                  <p>
+                    Lộ trình phát triển và định hướng nghề nghiệp rõ ràng giúp
+                    cá nhân nhìn nhận rõ tiềm năng của mình, là động lực to lớn
+                    để thúc đẩy phát triển của tổ chức. Chất lượng công việc và
+                    cuộc sống luôn được cân bằng khi làm việc trong môi trường
+                    an toàn và lý tưởng
+                  </p>
+                  <h4>Cơ hội phát triển</h4>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </section>
+      <!-- <section class="positionEmployee" id="position">
+        <h2 class="title-part">Các Vị Trí Đang Tuyển Dụng</h2>
+        <div class="bordersh"></div>
+        <div class="container">
+          <div class="row">
+            <div class="col-sm-6">
+              <div class="img-pe">
+                <img src="./imgs/employ1.png" alt="tuyendung1" />
+              </div>
+              <div class="txt-pe">
+                <h2>DIGITAL MARKETING</h2>
+                <a>Xem Thêm</a>
+              </div>
+            </div>
+            <div class="col-sm-6">
+              <div class="img-pe">
+                <img src="./imgs/employ2.png" alt="tuyendung2" />
+              </div>
+              <div class="txt-pe">
+                <h2>CONTENT MARKETING</h2>
+                <a>Xem Thêm</a>
+              </div>
+            </div>
+            <div class="col-sm-6">
+              <div class="img-pe">
+                <img src="./imgs/employ4.png" alt="tuyendung3" />
+              </div>
+              <div class="txt-pe">
+                <h2>DESIGNER</h2>
+                <a>Xem Thêm</a>
+              </div>
+            </div>
+            <div class="col-sm-6">
+              <div class="img-pe">
+                <img src="./imgs/employ3.png" alt="tuyendung4" />
+              </div>
+              <div class="txt-pe">
+                <h2>TELESALE</h2>
+                <a>Xem Thêm</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section> -->
+      <section class="positionEmployee" id="position">
+        <div class="over-play"></div>
+        <div class="contentUnder">
+          <div class="container">
+            <div class="row">
+              <div class="col-4" data-aos="fade-up">
+                <div class="imgp">
+                  <img src="./imgs/employ1.png" alt="posi1" />
+                </div>
+                <div class="textp">
+                  <h4>Digital Marketing</h4>
+                  <ul>
+                    <li>
+                      <h5>Kinh Nghiệm</h5>
+                      <p>Kinh Nghiệm</p>
+                    </li>
+                    <li>
+                      <h5>Mức lương</h5>
+                      <p>1.3 - 2.3 triệu</p>
+                    </li>
+                  </ul>
+                </div>
+                <div class="box-3">
+                  <a href="./DetailWork.html" class="btn btn-three">
+                    <span>CHI TIẾT</span>
+                  </a>
+                </div>
+              </div>
+              <div class="col-4" data-aos="fade-up">
+                <div class="imgp">
+                  <img src="./imgs/employ2.png" alt="posi2" />
+                </div>
+                <div class="textp">
+                  <h4>Digital Marketing</h4>
+                  <ul>
+                    <li>
+                      <h5>Kinh Nghiệm</h5>
+                      <p>Kinh Nghiệm</p>
+                    </li>
+                    <li>
+                      <h5>Mức lương</h5>
+                      <p>1.3 - 2.3 triệu</p>
+                    </li>
+                  </ul>
+                </div>
+                <div class="box-3">
+                  <div class="btn btn-three">
+                    <span>CHI TIẾT</span>
+                  </div>
+                </div>
+              </div>
+              <div class="col-4" data-aos="fade-up">
+                <div class="imgp">
+                  <img src="./imgs/employ3.png" alt="posi3" />
+                </div>
+                <div class="textp">
+                  <h4>Content Marketing</h4>
+                  <ul>
+                    <li>
+                      <h5>Kinh Nghiệm</h5>
+                      <p>Kinh Nghiệm</p>
+                    </li>
+                    <li>
+                      <h5>Mức lương</h5>
+                      <p>1.3 - 2.3 triệu</p>
+                    </li>
+                  </ul>
+                </div>
+                <div class="box-3">
+                  <div class="btn btn-three">
+                    <span>CHI TIẾT</span>
+                  </div>
+                </div>
+              </div>
+              <div class="col-4" data-aos="fade-up">
+                <div class="imgp">
+                  <img src="./imgs/employ4.png" alt="posi4" />
+                </div>
+                <div class="textp">
+                  <h4>Telesale</h4>
+                  <ul>
+                    <li>
+                      <h5>Kinh Nghiệm</h5>
+                      <p>Kinh Nghiệm</p>
+                    </li>
+                    <li>
+                      <h5>Mức lương</h5>
+                      <p>1.3 - 2.3 triệu</p>
+                    </li>
+                  </ul>
+                </div>
+                <div class="box-3">
+                  <div class="btn btn-three">
+                    <span>CHI TIẾT</span>
+                  </div>
+                </div>
+              </div>
+              <div class="col-4" data-aos="fade-up">
+                <div class="imgp">
+                  <img src="./imgs/employ3.png" alt="posi5" />
+                </div>
+                <div class="textp">
+                  <h4>Thiết kế đồ hoạ</h4>
+                  <ul>
+                    <li>
+                      <h5>Kinh Nghiệm</h5>
+                      <p>Kinh Nghiệm</p>
+                    </li>
+                    <li>
+                      <h5>Mức lương</h5>
+                      <p>1.3 - 2.3 triệu</p>
+                    </li>
+                  </ul>
+                </div>
+                <div class="box-3">
+                  <div class="btn btn-three">
+                    <span>CHI TIẾT</span>
+                  </div>
+                </div>
+              </div>
+              <div class="col-4" data-aos="fade-up">
+                <div class="imgp">
+                  <img src="./imgs/employ1.png" alt="posi1" />
+                </div>
+                <div class="textp">
+                  <h4>Digital Marketing</h4>
+                  <ul>
+                    <li>
+                      <h5>Kinh Nghiệm</h5>
+                      <p>Kinh Nghiệm</p>
+                    </li>
+                    <li>
+                      <h5>Mức lương</h5>
+                      <p>1.3 - 2.3 triệu</p>
+                    </li>
+                  </ul>
+                </div>
+                <div class="box-3">
+                  <div class="btn btn-three">
+                    <span>CHI TIẾT</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section class="valuesW" id="values">
+        <div class="container">
+          <div class="row">
+            <div class="col-6" data-aos="fade-right">
+              <img src="./imgs/hiring1.jpg" alt="hiringkhn" />
+            </div>
+            <div class="col-6" data-aos="fade-left">
+              <h2>Giá Trị Bạn Sẽ Gặt Hái Tại Đây</h2>
+              <p>
+                Dưới đây là 5 giá trị mà bạn sẽ tích luỹ được khi làm việc tại
+                Khải Hoàn Net chúng tôi:
+              </p>
+              <ul>
+                <li>
+                  <i class="fas fa-check-double"></i>Một tuổi trẻ rực rỡ được
+                  sống và làm việc hết mình.
+                </li>
+                <li>
+                  <i class="fas fa-check-double"></i> Kiến thức chuyên môn của
+                  bạn không ngừng được trau dồi để vươn cao và xa hơn.
+                </li>
+                <li>
+                  <i class="fas fa-check-double"></i> Những người bạn luôn đồng
+                  hành cùng bạn chiến đấu, chinh phục những đỉnh cao mới.
+                </li>
+                <li>
+                  <i class="fas fa-check-double"></i>Nguồn thu nhập vượt kì vọng
+                  và mọi ước mơ của bạn đều trở thành hiện thực.
+                </li>
+                <li>
+                  <i class="fas fa-check-double"></i>Nguồn thu nhập vượt kì vọng
+                  và mọi ước mơ của bạn đều trở thành hiện thực.
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section class="people" id="people">
+        <div class="title">
+          <h2 class="title-part">Our People</h2>
+          <p>Ý kiến của các nhân sự chủ chốt</p>
+        </div>
+        <div class="container">
+          <div class="row">
+            <div class="col-sm-4" data-aos="zoom-out">
+              <div class="imgpl">
+                <img src="./imgs/activities/acti6.jpeg" alt="mem1" />
+              </div>
+              <div class="contentUn-pl">
+                <h4>Jame Huynh</h4>
+                <p>Designer</p>
+                <p>
+                  Lorem Ipsum is simply dummy text of the printing and
+                  typesetting industry. Lorem Ipsum has been the industry's
+                  standard dummy text ever since the 1500s
+                </p>
+              </div>
+            </div>
+            <div class="col-sm-4" data-aos="zoom-out">
+              <div class="imgpl">
+                <img src="./imgs/member6.png" alt="mem1" />
+              </div>
+              <div class="contentUn-pl">
+                <h4>Jame Huynh</h4>
+                <p>Designer</p>
+                <p>
+                  Lorem Ipsum is simply dummy text of the printing and
+                  typesetting industry. Lorem Ipsum has been the industry's
+                  standard dummy text ever since the 1500s
+                </p>
+              </div>
+            </div>
+            <div class="col-sm-4" data-aos="zoom-out">
+              <div class="imgpl">
+                <img src="./imgs/member6.png" alt="mem1" />
+              </div>
+              <div class="contentUn-pl">
+                <h4>Jame Huynh</h4>
+                <p>Designer</p>
+                <p>
+                  Lorem Ipsum is simply dummy text of the printing and
+                  typesetting industry. Lorem Ipsum has been the industry's
+                  standard dummy text ever since the 1500s
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+    <footer>
+      <div class="container">
+        <div class="row justify-content-between f1">
+          <div class="col-4">
+            <h2>
+              <a href="#">
+                KhaiHoanNet
+                <span>Nơi Khơi Dậy Giấc Mơ</span>
+              </a>
+            </h2>
+          </div>
+          <div class="col-4">
+            <ul class="fsm-ic">
+              <li class="fsm-ic item">
+                <a
+                  class="fsm-ic link"
+                  data-toggle="tooltip"
+                  data-placement="top"
+                  title=""
+                  data-original-title="Facebook"
+                >
+                  <i class="fab fa-facebook-square"></i>
+                </a>
+              </li>
+            </ul>
+          </div>
+        </div>
+        <div class="row f2">
+          <div class="col">
+            <h2>Khai Hoan Net</h2>
+            <ul class="f2-infoL">
+              <li class="f2-infoL-item">
+                <a class="f2-infoL-link">
+                  <i class="fas fa-clock"></i>
+                  <span class="info-under">
+                    Thứ 2 - Thứ 7 | 08:00 - 17:00
+                  </span>
+                </a>
+              </li>
+              <li class="f2-infoL-item">
+                <a class="f2-infoL-link">
+                  <i class="fas fa-phone-alt"></i>
+                  <span class="info-under"> 0967 948 039 </span>
+                </a>
+              </li>
+              <li class="f2-infoL-item">
+                <a class="f2-infoL-link">
+                  <i class="fas fa-envelope"></i>
+                  <span class="info-under">info@khnet.vn</span>
+                  <span>congtykhaihoannet@gmail.com</span>
+                  <span>info@khnet.vn@gmail.com</span>
+                </a>
+              </li>
+            </ul>
+          </div>
+          <div class="col">
+            <h2>Văn Phòng</h2>
+            <ul class="offi-list">
+              <li class="offi-list-item">
+                <h2>Trụ sở chính</h2>
+                <a class="offi-list-link" href="#"
+                  ><i class="fas fa-map-marker-alt"></i>
+                  <span
+                    >31 Lê Hy Cát, phường Khuê Mỹ, quận Ngũ Hành Sơn, Tp. Đà
+                    Nẵng</span
+                  >
+                </a>
+              </li>
+              <li class="offi-list-item">
+                <h2>Văn phòng đại diện</h2>
+                <a class="offi-list-link" href="#"
+                  ><i class="fas fa-map-marker-alt"></i>
+                  <span>
+                    51 Bùi Tá Hán, phường Khuê Mỹ, quận Ngũ Hành Sơn, Tp. Đà
+                    Nẵng
+                  </span>
+                </a>
+              </li>
+            </ul>
+          </div>
+          <div class="col">
+            <h2>Bản Đồ</h2>
+            <iframe
+              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3834.6628708735734!2d108.24260267505252!3d16.031055884642935!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3142175bca7fe7ed%3A0xd80435a0e440bb0f!2zMzEgQnXMgGkgVGHMgSBIYcyBbiwgS2h1w6ogTeG7uSwgTmfFqSBIw6BuaCBTxqFuLCDEkMOgIE7hurVuZywgVmnhu4d0IE5hbQ!5e0!3m2!1svi!2s!4v1688386363461!5m2!1svi!2s"
+              style="border: 0"
+              allowfullscreen=""
+              loading="lazy"
+              class="map"
+              referrerpolicy="no-referrer-when-downgrade"
+            ></iframe>
+          </div>
+          <div class="col">
+            <h2>Facebook</h2>
+            <img src="./imgs/shg1.jpeg" />
+          </div>
+        </div>
+        <div class="row justify-content-between f3">
+          <div class="col-4">
+            <p>Copyright ©2023 All rights reserved.</p>
+          </div>
+          <div class="col-4">
+            <p>
+              This template is made with <i class="fas fa-heart"></i> by
+              <a href="#" class="textIc">KhaiHoanNet.com</a>
+            </p>
+          </div>
+        </div>
+      </div>
+    </footer>
+    <a class="ic-scrollTop" id="icScrollTop">
+      <i class="fas fa-chevron-up"></i>
+    </a>
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js"></script>
     <script src="./js/bootstrap.min.js"></script>
     <script src="./js/jquery.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js"></script>
+    <script
+      src="https://kit.fontawesome.com/d44e121fb7.js"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/magnific-popup.js/1.1.0/jquery.magnific-popup.min.js"
+      integrity="sha512-IsNh5E3eYy3tr/JiX2Yx4vsCujtkhwl7SLqgnwLNgf04Hrt9BT9SXlLlZlWx+OK4ndzAoALhsMNcCmkggjZB1w=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    ></script>
+    <script src="https://vjs.zencdn.net/8.3.0/video.min.js"></script>
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
     <script src="./js/index.js"></script>
   </body>
 </html>
