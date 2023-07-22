@@ -46,8 +46,7 @@
   width: 100%;
 }
 
-.button-5:hover,
-.button-5:focus {
+.button-5:hover {
   background-color: rgb(190, 147, 52, 0.7);
   box-shadow: rgba(0, 0, 0, 0.1) 0 4px 12px;
 }
@@ -119,6 +118,11 @@
 
 .headerForm {
   padding: 20px 40px;
+}
+
+.formWrapper {
+    border-top: 1px solid #e0e0e0;
+    border-top-style: dashed
 }
 
 .form-control {

@@ -144,9 +144,8 @@ $(document).ready(function () {
     },
     loop: true,
   });
-
-  new Swiper(".swiperlogo", {
-    spaceBetween: 50,
+  new Swiper(".swiperLibrary", {
+    spaceBetween: 30,
     slidesPerGroup: 1,
     direction: "horizontal",
     autoplay: {
@@ -154,8 +153,38 @@ $(document).ready(function () {
       disableOnInteraction: false,
     },
     speed: 800,
-    loopFillGroupBlank: true,
     loop: true,
+    pagination: {
+      el: ".swiper-pagination",
+      clickable: true,
+      parallax: true,
+    },
+    breakpoints: {
+      500: {
+        slidesPerView: 1,
+      },
+      868: {
+        slidesPerView: 1,
+      },
+      1000: {
+        slidesPerView: 2,
+      },
+      1250: {
+        slidesPerView: 2,
+      },
+    }
+  });
+
+
+  new Swiper(".swiperlogo", {
+    loop: true,
+    spaceBetween: 50,
+    direction: "horizontal",
+    autoplay: {
+      delay: 800,
+      disableOnInteraction: false,
+      stopOnLastSlide: false,
+    },
     breakpoints: {
       500: {
         slidesPerView: 1,
@@ -167,9 +196,10 @@ $(document).ready(function () {
         slidesPerView: 4,
       },
       1250: {
-        slidesPerView: 5,
+        slidesPerView: 4,
       },
     },
+    speed: 1000,
   });
 
   $("#next").on("click", function () {
@@ -207,14 +237,26 @@ $(document).ready(function () {
       },
     });
 
+  $("#scrollToFDetail").click(function (){
+      $('html, body').animate({
+          scrollTop: $('.detailW .container .row .formWrapper').offset().top - 50
+      }, 700);
+  });
+
   $(window).on("scroll", function () {
     const scrollY = window.scrollY;
+    const offsetTopDetail = $('.detailW .container .row .formWrapper').offset().top + 100;
     if (scrollY < 200) {
       $("#icScrollTop").removeClass("ic-scrollTop-show");
       $(".navbar-expand-lg").removeClass("oque");
     } else {
       $("#icScrollTop").addClass("ic-scrollTop-show");
       $(".navbar-expand-lg").addClass("oque");
+      if(scrollY > 900 && scrollY < offsetTopDetail) {
+        $('.detailW .container .row .col-4').css({ 'position' : 'fixed', 'top': '20px', 'right': '2.5%'})
+      } else {
+        $('.detailW .container .row .col-4').css({ 'position' : 'static'})
+      }
     }
 
     els.forEach((e) => {
@@ -254,7 +296,7 @@ $(document).ready(function () {
       if(val.getAttribute('data-val')==='98') {
         val.textContent = `${start}%`;
       } else {
-        val.textContent = `${start}+`;
+        val.textContent = `${start}+`;``
       }
 
       if (start == end) {
